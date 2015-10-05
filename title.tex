@@ -1,0 +1,28 @@
+\makeatletter
+
+\newcommand*{\email}[1]{\gdef\@email{#1}}
+\newcommand*{\ttitle}[1]{\gdef\@ttitle{#1}}
+\newcommand*{\submitDate}[1]{\gdef\@submitDate{#1}}
+
+\renewcommand*{\maketitle}{
+	\begin{titlepage}
+		\newgeometry{left=2.5cm,right=2.5cm,top=9.0cm,bottom=2.5cm}
+		\begin{center}
+			\vfill
+			{\huge\bf \@title\par}
+			\vskip 0.5cm
+			{ \small \textbf{\@ttitle} \par}
+			\vskip 1cm
+			\vfill
+			\begin{flushleft}
+				\begin{tabular}[t]{rl}
+					Author: &\@author\\
+					E-Mail: & \@email\\
+					Date: & \@submitDate
+				\end{tabular}
+			\end{flushleft}
+		\end{center}
+		\restoregeometry
+	\end{titlepage}
+}
+\makeatother

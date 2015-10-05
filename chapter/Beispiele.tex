@@ -1,0 +1,57 @@
+\chapter{Beispiele} \label{c:beispiele}
+
+Im Kapitel Beispiele (siehe \autoref{c:beispiele}) werden einige wichtige Funktionen und Möglichkeiten von LaTeX demonstriert.
+
+\section{Bild}
+
+Die nachfolgende \autoref{img:beispielbild} demonstriert die Darstellung eines \glqq *.jpg\grqq{} Bildes innerhalb des Textes (beim Einfügen kann auf die Endung verzichtet werden, solange der Name einzigartig ist). Zusätzlich enthält dieses einen Untertitel der über das bereits verwendete Label verlinkt werden kann. Der Untertitel erscheint im Abbildungsverzeichnis.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{resources/example}
+	\caption{Beispielbild}
+	\label{img:beispielbild}
+\end{figure}
+
+\section{Quelltext}
+
+Nachfolgend der \autoref{lst:helloworld}.
+
+\begin{lstlisting}[caption={Hello World}, captionpos=b, label={lst:helloworld}]
+/**
+* The HelloWorldApp class implements an application that
+* simply prints "Hello World!" to standard output.
+*/
+class HelloWorldApp {
+	public static void main(String[] args) {
+		System.out.println("Hello World!"); // Display the string.
+	}
+}
+\end{lstlisting}
+
+\section{Tabelle}
+
+Nachfolgend \autoref{tbl:DigitalesZertifikat}.
+
+\begin{table}[H]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabular}{|l|}
+			\hline
+			\textbf{Inhaber:}\\
+			Alice \\ \hline
+			\textbf{Peer (Ersteller):}\\
+			Bob \\ \hline
+			\textbf{Öffentlicher Schlüssel des Inhabers:}\\
+			F2 D2 0E ED FA 4E 9E 0A F2 DD 23 8A 32 44 F3 E9 \\ \hline
+			\textbf{Gültigkeit:}\\
+			2015-07-01 – 2016-06-30 \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Digitales Zertifikat}
+	\label{tbl:DigitalesZertifikat}
+\end{table}
+
+\section{Literaturverweis}
+
+Weil für die alte und die neue Rechtschreibung verschiedene Trennregeln gelten, sind Deutsch mit alter Rechtschreibung und Deutsch mit neuer Rechtschreibung zwei verschiedene Sprachen (\cite{Knappen2009}, S. 192).

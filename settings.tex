@@ -1,0 +1,91 @@
+%Documentclass- Book - scrbook
+\documentclass[12pt, a4paper, oneside, parskip=half, listof=totoc, bibliography=totoc]{scrbook}
+
+% Margins
+\usepackage[a4paper, top=2.5cm, left=2.5cm, right=4.0cm, bottom=2.0cm, includehead, includefoot]{geometry}
+
+%Linespacing 1,5
+\usepackage[onehalfspacing]{setspace}
+
+%Optimized display of letters
+\usepackage[stretch=10]{microtype}
+
+%Links within the document (e.g. for PDF)
+\usepackage[hidelinks,german]{hyperref}
+
+%German names and formatting
+\usepackage[ngerman]{babel}
+
+%Font and special characters support
+\usepackage{lmodern}
+\usepackage[utf8]{luainputenc}
+\usepackage[T1]{fontenc}
+
+%Acronyms
+\usepackage[printonlyused]{acronym}
+
+%Support of H in float environments
+\usepackage{float} 
+
+%Automatical breaks and division inside of a table
+\usepackage{tabularx}
+
+%Integrate and highlight source
+\usepackage{listings}
+
+%Define custom colors
+\usepackage{xcolor}
+
+%Illustrations
+\usepackage{tikz}
+
+%Graphics
+\usepackage{graphicx}
+
+%Integration and management of the bibliography
+\usepackage{csquotes}
+\usepackage[style=alphabetic, backend=biber, bibencoding=ascii]{biblatex}
+\addbibresource{references/books.bib}
+%\addbibresource{references/books}
+%\addbibresource{references/online}
+%\addbibresource{references/images}
+
+%---------------------------------------------------------------------------%
+
+%Additional colors
+\definecolor{darkgreen}{rgb}{0,0.9,0}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pLightblue}{HTML}{3E7EFF}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+%Renamings
+\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
+
+%Costumizing of the source code representation
+\renewcommand{\lstlistingname}{Codeauszug}
+\lstset{
+	language=Java,
+	columns=fullflexible,
+	aboveskip=5pt,
+	belowskip=10pt,
+	basicstyle=\small\ttfamily,
+	backgroundcolor=\color{black!5},
+	commentstyle=\color{pgreen},
+	keywordstyle=\color{pblue},
+	stringstyle=\color{pred},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	xleftmargin=10pt,
+	xrightmargin=0pt,
+	framesep=5pt,
+	framerule=3pt,
+	frame=leftline,
+	rulecolor=\color{darkgreen},
+	tabsize=2,
+	breaklines=true,
+	breakatwhitespace=true,
+	prebreak={\mbox{$\hookleftarrow$}}
+}

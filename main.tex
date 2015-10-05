@@ -1,0 +1,31 @@
+\include{settings}
+\include{title}
+
+\author{Max Mustermann}
+\title{Dies ist der Titel der LaTeX-Vorlage}
+\ttitle{Das ist der Untetitel}
+\email{max.mustermann@worldwideweb.de}
+\submitDate{05.10.2015}
+
+\begin{document}
+
+\pagenumbering{alph} %fix for same identifier warning, character is not show in title
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents \newpage
+
+\pagenumbering{arabic}
+\input{chapter/Einleitung} \clearpage
+\input{chapter/Beispiele} \clearpage
+
+\pagenumbering{Alph}
+\listoffigures \clearpage
+\listoftables \clearpage
+\lstlistoflistings \clearpage
+
+\printbibliography[keyword={book}, title={Literaturverzeichnis}]\clearpage
+%\printbibliography[keyword={online}, title={Onlinequellen}]\clearpage
+%\printbibliography[keyword={image}, title={Bildquellen}]\clearpage
+
+\end{document}
