@@ -1,58 +1,57 @@
-%Documentclass- Book - scrbook
+%Dokumentenklasse "scrbook" - Erweitert um den Verweis auf die Verzeichnisse und Texteigenschaften
 \documentclass[12pt, a4paper, oneside, parskip=half, listof=totoc, bibliography=totoc]{scrbook}
 
-% Margins
+%Seitenränder
 \usepackage[a4paper, top=2.5cm, left=2.5cm, right=4.0cm, bottom=2.0cm, includehead, includefoot]{geometry}
 
-%Linespacing 1,5
+%Zeilenabstand 1,5
 \usepackage[onehalfspacing]{setspace}
 
-%Optimized display of letters
+%Verbesserte Darstellung der Buchstaben zueinander
 \usepackage[stretch=10]{microtype}
 
-%Links within the document (e.g. for PDF)
+%Ermöglicht Verknüpfungen innerhalb des Dokumentes (e.g. for PDF), Links werden durch "hidelink" nicht explizit hervorgehoben
 \usepackage[hidelinks,german]{hyperref}
 
-%German names and formatting
+%Deutsche Bezeichnungen für angezeigte Namen (z.B. Innhaltsverzeichnis etc.)
 \usepackage[ngerman]{babel}
 
-%Font and special characters support
+%Unterstützung von Umlauten und anderen Sonderzeichen (UTF-8)
 \usepackage{lmodern}
 \usepackage[utf8]{luainputenc}
 \usepackage[T1]{fontenc}
 
-%Acronyms
+%Verwendung von Akronymen
 \usepackage[printonlyused]{acronym}
 
-%Support of H in float environments
+%Unterstützung der H positionierung (keine automatische Verschiebung eingefügter Elemente)
 \usepackage{float} 
 
-%Automatical breaks and division inside of a table
+%Erlaubt Umbrüche innerhalb von Tabellen
 \usepackage{tabularx}
 
-%Integrate and highlight source
+%Erlaubt die Darstellung von Sourcecode mit Highlighting
 \usepackage{listings}
 
-%Define custom colors
+%Definierung eigener Farben bei nutzung eines selbst vergebene Namens
 \usepackage{xcolor}
 
-%Illustrations
+%Vektorgrafiken
 \usepackage{tikz}
 
-%Graphics
+%Grafiken (wie jpg, png, etc.)
 \usepackage{graphicx}
 
-%Integration and management of the bibliography
-\usepackage{csquotes}
+%Einbindung und Verwaltung von Literaturverzeichnissen
+\usepackage{csquotes} %wird von biber benötigt
 \usepackage[style=alphabetic, backend=biber, bibencoding=ascii]{biblatex}
 \addbibresource{references/books.bib}
-%\addbibresource{references/books}
-%\addbibresource{references/online}
-%\addbibresource{references/images}
+\addbibresource{references/online.bib}
+\addbibresource{references/images.bib}
 
 %---------------------------------------------------------------------------%
 
-%Additional colors
+%Zusätzliche Farben
 \definecolor{darkgreen}{rgb}{0,0.9,0}
 \definecolor{pblue}{rgb}{0.13,0.13,1}
 \definecolor{pLightblue}{HTML}{3E7EFF}
@@ -60,10 +59,10 @@
 \definecolor{pred}{rgb}{0.9,0,0}
 \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
 
-%Renamings
+%Umbenennungen
 \renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
 
-%Costumizing of the source code representation
+%Anpassugen zur Quelltextdarstellung, kann bei Bedarf überschrieben werden (z.B. wenn unterschiedliche Sprachen zum Einsatz kommen)
 \renewcommand{\lstlistingname}{Codeauszug}
 \lstset{
 	language=Java,
