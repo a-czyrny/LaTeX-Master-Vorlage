@@ -7,6 +7,8 @@
 \email{max.mustermann@worldwideweb.de}
 \submitDate{05.10.2015}
 
+\makeindex
+
 \begin{document}
 
 \pagenumbering{alph} %fix for same identifier warning, character is not show in title
@@ -23,6 +25,10 @@
 \listoffigures \clearpage
 \listoftables \clearpage
 \lstlistoflistings \clearpage
+
+\renewcommand{\indexname}{Stichwortverzeichnis}
+\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
+\printindex
 
 \printbibliography[keyword={book}, title={Literaturverzeichnis}]\clearpage
 \printbibliography[keyword={online}, title={Onlinequellen}]\clearpage
