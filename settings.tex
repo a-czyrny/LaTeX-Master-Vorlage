@@ -1,6 +1,16 @@
 %Dokumentenklasse "scrbook" - Erweitert um den Verweis auf die Verzeichnisse und Texteigenschaften
 \documentclass[12pt, a4paper, oneside, parskip=half, listof=totoc, bibliography=totoc]{scrbook}
 
+%Tweaks für scrbook
+\usepackage{scrhack}
+
+%Stichwortverzeichnis
+\usepackage{imakeidx}
+
+%Manipulation von Kopf- und Fußzeile, die Warnungen im LOG können ignoriert werden.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
 %Seitenränder
 \usepackage[a4paper, top=2.5cm, left=2.5cm, right=4.0cm, bottom=2.0cm, includehead, includefoot]{geometry}
 
@@ -9,12 +19,6 @@
 
 %Verbesserte Darstellung der Buchstaben zueinander
 \usepackage[stretch=10]{microtype}
-
-%Ermöglicht Verknüpfungen innerhalb des Dokumentes (e.g. for PDF), Links werden durch "hidelink" nicht explizit hervorgehoben
-\usepackage[hidelinks,german]{hyperref}
-
-%Stichwortverzeichnis
-\usepackage{makeidx}
 
 %Deutsche Bezeichnungen für angezeigte Namen (z.B. Innhaltsverzeichnis etc.)
 \usepackage[ngerman]{babel}
@@ -45,6 +49,9 @@
 %Grafiken (wie jpg, png, etc.)
 \usepackage{graphicx}
 
+%Ermöglicht Verknüpfungen innerhalb des Dokumentes (e.g. for PDF), Links werden durch "hidelink" nicht explizit hervorgehoben
+\usepackage[hidelinks,german]{hyperref}
+
 %Einbindung und Verwaltung von Literaturverzeichnissen
 \usepackage{csquotes} %wird von biber benötigt
 \usepackage[style=alphabetic, backend=biber, bibencoding=ascii]{biblatex}
@@ -53,6 +60,9 @@
 \addbibresource{references/images.bib}
 
 %---------------------------------------------------------------------------%
+
+%Anpassung der Überschriften
+\addtokomafont{disposition}{\rmfamily}
 
 %Zusätzliche Farben
 \definecolor{darkgreen}{rgb}{0,0.9,0}

@@ -1,7 +1,9 @@
 \makeatletter
 
+\newcommand*{\gradetype}[1]{\gdef\@\gradetype{#1}}
 \newcommand*{\email}[1]{\gdef\@email{#1}}
 \newcommand*{\ttitle}[1]{\gdef\@ttitle{#1}}
+\newcommand*{\matrikelnr}[1]{\gdef\@\matrikelnr{#1}}
 \newcommand*{\submitDate}[1]{\gdef\@submitDate{#1}}
 
 \renewcommand*{\maketitle}{
@@ -9,16 +11,16 @@
 		\newgeometry{left=2.5cm,right=2.5cm,top=9.0cm,bottom=2.5cm}
 		\begin{center}
 			\vfill
-			{\huge\bf \@title\par}
+			{\huge \@title\par}
 			\vskip 0.5cm
 			{ \small \textbf{\@ttitle} \par}
 			\vskip 1cm
 			\vfill
 			\begin{flushleft}
 				\begin{tabular}[t]{rl}
-					Author: &\@author\\
-					E-Mail: & \@email\\
-					Date: & \@submitDate
+					Eingereicht von: &\@author\\
+					Matrikelnummer: & \@\matrikelnr\\
+					Datum der Abgabe: & \@submitDate
 				\end{tabular}
 			\end{flushleft}
 		\end{center}

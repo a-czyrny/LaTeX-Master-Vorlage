@@ -1,13 +1,14 @@
 \include{settings}
 \include{title}
 
-\author{Max Mustermann}
+\gradetype{Masterarbeit}
 \title{Dies ist der Titel der LaTeX-Vorlage}
-\ttitle{Das ist der Untetitel}
-\email{max.mustermann@worldwideweb.de}
+\ttitle{Das ist der Untertitel}
+\author{Max Mustermann}
+\matrikelnr{s0000000}
 \submitDate{05.10.2015}
 
-\makeindex
+\makeindex[title=Stichwortverzeichnis, intoc=true]
 
 \begin{document}
 
@@ -26,9 +27,8 @@
 \listoftables \clearpage
 \lstlistoflistings \clearpage
 
-\renewcommand{\indexname}{Stichwortverzeichnis}
-\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
-\printindex
+%\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
+\printindex \clearpage
 
 \printbibliography[keyword={book}, title={Literaturverzeichnis}]\clearpage
 \printbibliography[keyword={online}, title={Onlinequellen}]\clearpage
