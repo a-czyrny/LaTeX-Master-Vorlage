@@ -1,9 +1,9 @@
 \makeatletter
 
-\newcommand*{\gradetype}[1]{\gdef\@\gradetype{#1}}
-\newcommand*{\email}[1]{\gdef\@email{#1}}
-\newcommand*{\ttitle}[1]{\gdef\@ttitle{#1}}
-\newcommand*{\matrikelnr}[1]{\gdef\@\matrikelnr{#1}}
+\newcommand*{\gradeType}[1]{\gdef\@gradeType{#1}}
+\newcommand*{\firstExaminer}[1]{\gdef\@firstExaminer{#1}}
+\newcommand*{\secondExaminer}[1]{\gdef\@secondExaminer{#1}}
+\newcommand*{\matrikelnr}[1]{\gdef\@matrikelnr{#1}}
 \newcommand*{\submitDate}[1]{\gdef\@submitDate{#1}}
 
 \renewcommand*{\maketitle}{
@@ -11,15 +11,23 @@
 		\newgeometry{left=2.5cm,right=2.5cm,top=9.0cm,bottom=2.5cm}
 		\begin{center}
 			\vfill
-			{\huge \@title\par}
+			{\Large \@title\par}
 			\vskip 0.5cm
-			{ \small \textbf{\@ttitle} \par}
-			\vskip 1cm
+			{\large \bfseries Abschlussarbeit\par}
+			\vskip 0.5cm
+			{\large zur Erlangung des akademischen Grades\\ \bfseries \@gradeType}
+			\vskip 0.5cm
+			{\large an der}
+			\vskip 0.5cm
+			{\large Hochschule für Technik und Wirtschaft Berlin\\ Fachbereich Wirtschaftswissenschaften II\\ Studiengang Angewandte Informatik}
 			\vfill
 			\begin{flushleft}
 				\begin{tabular}[t]{rl}
+					1. Prüfer: &\@firstExaminer\\
+					2. Prüfer: & \@secondExaminer\\
+					\\
 					Eingereicht von: &\@author\\
-					Matrikelnummer: & \@\matrikelnr\\
+					Matrikelnummer: & \@matrikelnr\\
 					Datum der Abgabe: & \@submitDate
 				\end{tabular}
 			\end{flushleft}
