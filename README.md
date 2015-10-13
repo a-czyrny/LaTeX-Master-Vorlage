@@ -1,5 +1,10 @@
 # LaTeX-Master-Vorlage
+
 Die Funktionskommentare sind innerhalb der *.tex Dateien auf Deutsch.
+
+## Beispiel-PDF
+
+[PDF Ansehen](main.pdf)
 
 ## Anmerkungen
 ### Stichwortverzeichnis
