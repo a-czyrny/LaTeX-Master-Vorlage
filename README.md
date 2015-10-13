@@ -16,7 +16,7 @@ Zum Erzeugen vom Stichwortverzeichnis, Glossar und Abkürzungsverzeichnis muss "
 
 *makeindex -s main.ist -t main.alg -o main.acr main.acn*
 
-Der Titel im Header der Seite muss zusätzlich in der Style-Datei "[main.ist](main.ist)" angepasst werden:
+Der Titel im Header der Seite muss zusätzlich in der Style-Datei "[indexstyle.ist](indexstyle.ist)" angepasst werden:
 
 siehe: preamble "\\\markboth{**STICHWORTVERZEICHNIS**}{}\n\n\\begin{theindex}\n"
 
