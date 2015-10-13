@@ -11,7 +11,7 @@
 
 \makeindex[title=Stichwortverzeichnis, intoc=true]
 \makeglossaries
-\loadglsentries{acronyms.tex}
+\loadglsentries{glossary_and_acronyms.tex}
 \setacronymstyle{long-short}
 
 
@@ -27,12 +27,16 @@
 \input{chapter/Einleitung} \clearpage
 \input{chapter/Beispiele} \clearpage
 
+\fancyhf{}
+\fancyhead[L]{\MakeUppercase{\leftmark}}
+
 \pagenumbering{Alph}
 \listoffigures \clearpage
 \listoftables \clearpage
 \lstlistoflistings \clearpage
 
 \printindex \clearpage
+\printglossary[title={Glossar}] \clearpage
 \printglossary[type=\acronymtype,title={Abkürzungsverzeichnis}] \clearpage
 
 \printbibliography[keyword={book}, title={Literaturverzeichnis}]\clearpage
