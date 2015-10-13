@@ -9,11 +9,12 @@
 \matrikelnr{s0000000}
 \submitDate{05.10.2015}
 
-\makeindex[title=Stichwortverzeichnis, intoc=true]
+\makeindex[title=Stichwortverzeichnis, intoc]
+\indexsetup{level=\chapter*,toclevel=chapter}
+
 \makeglossaries
 \loadglsentries{glossary_and_acronyms.tex}
 \setacronymstyle{long-short}
-
 
 \begin{document}
 
@@ -27,15 +28,13 @@
 \input{chapter/Einleitung} \clearpage
 \input{chapter/Beispiele} \clearpage
 
-\fancyhf{}
-\fancyhead[L]{\MakeUppercase{\leftmark}}
-
 \pagenumbering{Alph}
 \listoffigures \clearpage
 \listoftables \clearpage
 \lstlistoflistings \clearpage
 
 \printindex \clearpage
+
 \printglossary[title={Glossar}] \clearpage
 \printglossary[type=\acronymtype,title={Abkürzungsverzeichnis}] \clearpage
 
