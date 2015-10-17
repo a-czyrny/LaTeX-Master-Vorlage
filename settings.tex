@@ -73,18 +73,13 @@
 \usepackage[style=alphabetic, backend=biber, bibencoding=ascii]{biblatex}
 \addbibresource{references/references.bib}
 
-%---------------------------------------------------------------------------%
+%-------------------------------Zusätzliche Anpassungen und Modifikationen--------------------------------------------%
 
 %Anpassung der Überschriften
 \addtokomafont{disposition}{\rmfamily}
 
 %Zusätzliche Farben
-\definecolor{darkgreen}{rgb}{0,0.9,0}
-\definecolor{pblue}{rgb}{0.13,0.13,1}
-\definecolor{pLightblue}{HTML}{3E7EFF} %auch in RGB-Darstellung
-\definecolor{pgreen}{rgb}{0,0.5,0}
-\definecolor{pred}{rgb}{0.9,0,0}
-\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{darkgreen}{RGB}{0,100,0}
 
 %Umbenennungen
 \renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
@@ -98,9 +93,9 @@
 	belowskip=10pt,
 	basicstyle=\small\ttfamily,
 	backgroundcolor=\color{black!5},
-	commentstyle=\color{pgreen},
-	keywordstyle=\color{pblue},
-	stringstyle=\color{pred},
+	commentstyle=\color{darkgreen},
+	keywordstyle=\color{blue},
+	stringstyle=\color{gray},
 	showspaces=false,
 	showstringspaces=false,
 	showtabs=false,
@@ -109,7 +104,7 @@
 	framesep=5pt,
 	framerule=3pt,
 	frame=leftline,
-	rulecolor=\color{darkgreen},
+	rulecolor=\color{green},
 	tabsize=2,
 	breaklines=true,
 	breakatwhitespace=true,
