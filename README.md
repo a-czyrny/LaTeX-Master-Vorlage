@@ -8,9 +8,7 @@ Die Funktionskommentare sind innerhalb der *.tex Dateien auf Deutsch.
 
 ## Anmerkungen
 ### Stichwortverzeichnis
-Zum Erzeugen vom Stichwortverzeichnis, Glossar und Abkürzungsverzeichnis muss "makeinxed" wie folgt aufgerufen werden:
-
-*makeindex -s indexstyle.ist main.idx*
+Zum Erzeugen des Glossar und Abkürzungsverzeichnis muss "makeinxed" wie folgt aufgerufen werden:
 
 *makeindex -s main.ist -t main.glg -o main.gls main.glo*
 
