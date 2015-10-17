@@ -1,19 +1,19 @@
 %Dokumentenklasse "scrbook" - Erweitert um den Verweis auf die Verzeichnisse und Texteigenschaften
 \documentclass[chapterprefix=true, 12pt, a4paper, oneside, parskip=half, listof=totoc, bibliography=totoc]{scrbook}
 
-%Blindtext
-\usepackage{blindtext}
-
 %Tweaks für scrbook
 \usepackage{scrhack}
+
+%Blindtext
+\usepackage{blindtext}
 
 %Stichwortverzeichnis
 \usepackage{imakeidx}
 
-%\usepackage{glossaries} % Akronyme sind bestandteil es Glossars
+%Glossar, Stichworverzeichnis
 \usepackage[toc, acronym]{glossaries} % Akronyme werden als eigene Liste aufgeführt
 
-%Manipulation von Kopf- und Fußzeile
+%Anpassung von Kopf- und Fußzeile
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \automark{chapter}
 \ihead{\leftmark}
@@ -27,7 +27,7 @@
 %Auskommentieren für die Verkleinerung des vertikalen Abstandes eines neuen Kapitels
 %\renewcommand*{\chapterheadstartvskip}{\vspace*{.25\baselineskip}}
 
-%Seitenränder
+%Anpassung der Seitenränder ermöglichen
 \usepackage{geometry}
 
 %Zeilenabstand 1,5
@@ -71,9 +71,7 @@
 %Einbindung und Verwaltung von Literaturverzeichnissen
 \usepackage{csquotes} %wird von biber benötigt
 \usepackage[style=alphabetic, backend=biber, bibencoding=ascii]{biblatex}
-\addbibresource{references/books.bib}
-\addbibresource{references/online.bib}
-\addbibresource{references/images.bib}
+\addbibresource{references/references.bib}
 
 %---------------------------------------------------------------------------%
 
