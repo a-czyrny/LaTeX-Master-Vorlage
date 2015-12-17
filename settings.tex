@@ -110,3 +110,12 @@
 	breakatwhitespace=true,
 	prebreak={\mbox{$\hookleftarrow$}}
 }
+
+%Anpassungen für das Abkürzungsverzeichnis
+\newglossarystyle{dottedlocations}{%
+	\glossarystyle{list}%
+	\renewcommand*{\glossaryentryfield}[5]{%
+		\item[\glsentryitem{##1}\glstarget{##1}{##2}] \emph{##3}%
+		\unskip\leaders\hbox to 2.9mm{\hss.}\hfill##5}%
+	\renewcommand*{\glsgroupskip}{}%
+}
