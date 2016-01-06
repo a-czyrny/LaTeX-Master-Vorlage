@@ -20,8 +20,16 @@ class HelloWorldApp {
 
 \section{Bild}
 
-Die nachfolgende \autoref{img:beispielbild} demonstriert die Darstellung\index{Darstellung} eines \glqq *.jpg\grqq{} Bildes innerhalb des Textes (beim Einfügen kann auf die Endung verzichtet werden, solange der Name einzigartig ist). Zusätzlich enthält dieses einen Untertitel der über das bereits verwendete Label verlinkt werden kann. Der Untertitel\index{Untertitel} erscheint im \gls{abbvz}.
+\begin{wrapfigure}{R}{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.5\textwidth]{resources/example}
+	\caption{Beispielbild {\cite{PEXELS2015}}}
+\end{wrapfigure}
 
+Die rechts zu sehende Grafik demonstriert die Möglichkeiten des Paketes \glqq wrapfig\grqq . Grafiken innerhalb einer \glqq wrapfigure\grqq{} können entweder links oder rechts von Text umlaufen werden.
+
+Die nachfolgende \autoref{img:beispielbild} demonstriert die Darstellung\index{Darstellung} eines \glqq *.jpg\grqq{} Bildes innerhalb des Textes (beim Einfügen kann auf die Endung verzichtet werden, solange der Name einzigartig ist). Zusätzlich enthält dieses einen Untertitel der über das bereits verwendete Label verlinkt werden kann. Der Untertitel\index{Untertitel} erscheint im \gls{abbvz}.
+\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{resources/example}
