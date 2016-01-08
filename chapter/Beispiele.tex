@@ -29,7 +29,33 @@ class HelloWorldApp {
 Die rechts zu sehende Grafik demonstriert die Möglichkeiten des Paketes \glqq wrapfig\grqq . Grafiken innerhalb einer \glqq wrapfigure\grqq{} können entweder links oder rechts von Text umlaufen werden.
 
 Die nachfolgende \autoref{img:beispielbild} demonstriert die Darstellung\index{Darstellung} eines \glqq *.jpg\grqq{} Bildes innerhalb des Textes (beim Einfügen kann auf die Endung verzichtet werden, solange der Name einzigartig ist). Zusätzlich enthält dieses einen Untertitel der über das bereits verwendete Label verlinkt werden kann. Der Untertitel\index{Untertitel} erscheint im \gls{abbvz}.
+
+\section{Text Formatierungen und sonstiges}
+Dieser Text enthält eine Fußnote\footnote{Fußnoten sind Anmerkungen, die im Druck-Layout aus dem Fließtext ausgelagert werden, um den Text flüssig lesbar zu gestalten.}.
+
+\subsection{Listen}
+Listen könne sowohl mit Bullet points als auch mit Zahlen erstellt werden
+\begin{itemize}
+	\item Eine Liste mit Bullet points
+	\item Ein weiteres Element
+\end{itemize}
+
+\begin{enumerate}
+	\item Eine Liste mit Zahlen
+	\item Ein weiteres Element
+\end{enumerate}
+
+\subsection{Text Hervorhebungen}
+\begin{quote}
+	The problem with internet quotes is that you can't always depend on their accuracy \par\raggedleft--- \textup{Abraham Lincoln, 1864}
+\end{quote}
+
+"Inspirierende Zitate können mit epigraph eingefügt werden
+\epigraph{The problem with internet quotes is that you can't always depend on their accuracy}{Abraham Lincoln, 1864}
+
+Seitenumbrüche können nur direkt nach Text geschrieben werden, sonst lässt sich das Latex nicht mehr compilieren.
 \\
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{resources/example}

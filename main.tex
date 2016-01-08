@@ -1,13 +1,24 @@
 \include{settings}
-\include{title}
 
-\title{Dies ist der Titel der Abschlussarbeit der sich auch über mehrere Zeilen erstrecken kann}
+%%Titles - Uncomment one section of titles
+
+%%Used for titleGraduation
+\include{titles/titleGraduation}
 \gradeType{Master of Science (M.Sc.)}
-\firstExaminer{Max Mustermann}
 \secondExaminer{Max Mustermann}
+
+%%Used for titleResearchPaper
+%\include{titles/titleResearchPaper}
+%\subTitle{Ein optionaler Untertitel der Arbeit}
+%\researchPart{A}
+
+%%Used by all titles
+\title{Dies ist der Titel der Abschlussarbeit der sich auch über mehrere Zeilen erstrecken kann}
 \author{Max Mustermann}
 \matrikelnr{s0000000}
 \submitDate{05.10.2015}
+\firstExaminer{Max Mustermann}
+%%End Titles
 
 \makeindex[title=Stichwortverzeichnis, options=-s indexstyle.ist, intoc]
 \indexsetup{level=\chapter*,toclevel=chapter}
