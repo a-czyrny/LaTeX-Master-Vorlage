@@ -1,13 +1,22 @@
 # LaTeX-Master-Vorlage
 
-Die Funktionskommentare sind innerhalb der *.tex Dateien auf Deutsch.
+Die Latex-Master-Vorlage kann für Forschungsprojekte, Bachelor- und Masterarbeiten optimal genutzt werden. Notwendigen Pakete sind bereits eingebunden und Einstellungen vorgenommen. Die Funktionskommentare innerhalb der *.tex Dateien sind größtenteils auf Deutsch. Ergänzungen Anderer können jedoch in englischer Sprache ausfallen. Diese werden, wenn notwendig, zeitnah übersetzt.
 
-## Beispiel-PDF
+# Empfohlene Umgebung
+
+Die Vorlage wurde erfolgreich unter der [TEX Live](http://tug.org/texlive/) Umgebung mit folgenden Programmen kompiliert.
+
+- **Compiler**: lualatex
+- **Bibliographie**: biber
+- **Index**: makeindex (Ergänzungen unter Anmerkungen beachten)
+- **Glossar**: makeglossaries
+
+# Beispiel-PDF
 
 [PDF Ansehen](main.pdf)
 
-## Anmerkungen
-### Stichwortverzeichnis
+# Anmerkungen
+## Stichwortverzeichnis
 Zum Erzeugen des Glossar und Abkürzungsverzeichnis muss "makeinxed" wie folgt aufgerufen werden:
 
 *makeindex -s main.ist -t main.glg -o main.gls main.glo*
@@ -17,6 +26,3 @@ Zum Erzeugen des Glossar und Abkürzungsverzeichnis muss "makeinxed" wie folgt a
 Der Titel im Header der Seite muss zusätzlich in der Style-Datei "[indexstyle.ist](indexstyle.ist)" angepasst werden:
 
 siehe: preamble "\\\markboth{**STICHWORTVERZEICHNIS**}{}\n\n\\begin{theindex}\n"
-
-### biber downgrade
-Sollte das Erstellen der Literaturverzeichnisse nicht funktionieren, ist es in einigen Fällen notwendig "biber" zu downgraden. Als vollständig kompatibel hat sich Version 1.9 (http://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/1.9/) herausgestellt.
