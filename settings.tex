@@ -1,19 +1,36 @@
 %Dokumentenklasse "scrbook" - Erweitert um den Verweis auf die Verzeichnisse und Texteigenschaften
 \documentclass[chapterprefix=true, 12pt, a4paper, oneside, parskip=half, listof=totoc, bibliography=totoc, numbers=noendperiod]{scrbook}
 
+% Ränder (Standard bottom ca. 52mm anbzüglich von ca. 4mm für die nach oben rechts gewanderte Seitenzahl)
+%Anpassung der Seitenränder
+\usepackage[bottom=48mm,left=25mm,right=25mm]{geometry}
+
+% Ränder bei Bedarf zeigen
+%\usepackage{showframe}
+
 %Tweaks für scrbook
 \usepackage{scrhack}
 
 %Blindtext
 \usepackage{blindtext}
 
+%Erlaubt unteranderem Umbrücke captions
+\usepackage{caption}
+
 %Stichwortverzeichnis
 \usepackage{imakeidx}
+
+%Kompakte Listen
+\usepackage{paralist}
+
+%Zitate besser formatieren und darstellen
+\usepackage{epigraph}
 
 %Glossar, Stichworverzeichnis
 \usepackage[toc, acronym]{glossaries} % Akronyme werden als eigene Liste aufgeführt
 
 %Anpassung von Kopf- und Fußzeile
+%beinflusst die erste Seite des Kapitels
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \automark{chapter}
 \ihead{\leftmark}
@@ -21,14 +38,12 @@
 \ohead{\thepage}
 \ifoot*{}
 \cfoot[\thepage]{}
+\cfoot*{}
 \ofoot*{}
 \pagestyle{scrheadings}
 
 %Auskommentieren für die Verkleinerung des vertikalen Abstandes eines neuen Kapitels
 %\renewcommand*{\chapterheadstartvskip}{\vspace*{.25\baselineskip}}
-
-%Anpassung der Seitenränder ermöglichen
-\usepackage{geometry}
 
 %Zeilenabstand 1,5
 \usepackage[onehalfspacing]{setspace}
@@ -56,11 +71,14 @@
 %Erlaubt Umbrüche innerhalb von Tabellen
 \usepackage{tabularx}
 
+%Erlaubt Seitenumbrüche mit Tabellen
+\usepackage{longtable}
+
 %Erlaubt die Darstellung von Sourcecode mit Highlighting
 \usepackage{listings}
 
 %Definierung eigener Farben bei nutzung eines selbst vergebene Namens
-\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor}
 
 %Vektorgrafiken
 \usepackage{tikz}
@@ -90,10 +108,14 @@
 %Umbenennungen
 \renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
 
+%Pluszeichen in der Referenc beim zitieren ausblenden
+\renewcommand*{\labelalphaothers}{}
+
 %Anpassugen zur Quelltextdarstellung, kann bei Bedarf überschrieben werden (z.B. wenn unterschiedliche Sprachen zum Einsatz kommen)
 \renewcommand{\lstlistingname}{Codeauszug}
 \lstset{
 	language=Java,
+	numbers=left,
 	columns=fullflexible,
 	aboveskip=5pt,
 	belowskip=10pt,
@@ -105,7 +127,7 @@
 	showspaces=false,
 	showstringspaces=false,
 	showtabs=false,
-	xleftmargin=10pt,
+	xleftmargin=16pt,
 	xrightmargin=0pt,
 	framesep=5pt,
 	framerule=3pt,
