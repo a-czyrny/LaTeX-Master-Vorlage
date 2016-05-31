@@ -86,6 +86,42 @@ Nachfolgend \autoref{tbl:DigitalesZertifikat}.
 	\label{tbl:DigitalesZertifikat}
 \end{table}
 
+\section{Long-Table}
+
+Die \glqq Long-Table\grqq kann über definierte Header und Footer über Seitenumbrüche hinweg angezeigt werden.
+
+\begin{longtable}{|l|l|l|l|}
+	\hline
+	\multicolumn{1}{|c}{\textbf{Version}} & \multicolumn{1}{|c}{\textbf{Codename}} &
+	\multicolumn{1}{|c}{\textbf{API}} &
+	\multicolumn{1}{|c|}{\textbf{Verteilung}} \\ \hline
+	\endfirsthead
+	
+	\multicolumn{4}{c}{Fortsetzung - Verteilung der Androidversionen (Stand 01.02.2016)}\\ \hline
+	\multicolumn{1}{|c}{\textbf{Version}} & \multicolumn{1}{|c}{\textbf{Codename}} &
+	\multicolumn{1}{|c}{\textbf{API}} &
+	\multicolumn{1}{|c|}{\textbf{Verteilung}} \\ \hline 
+	\endhead
+	
+	\multicolumn{4}{c}{Fortsetzung auf nachfolgender Seite}
+	\endfoot
+	
+	\caption{Verteilung der Androidversionen (Stand: 01.02.2016)}
+	\label{tab:androidverteilung}
+	\endlastfoot
+	
+	2.2 & Froyo & 8 & 0.1\%\\ \hline
+	2.3.3 - 2.3.7 & Gingerbread & 10 & 2.7\%\\ \hline
+	4.0.3 - 4.0.4 & Ice Cream Sandwich & 15 & 2.5\%\\ \hline
+	4.1.x & Jelly Bean & 16 & 8.8\%\\ \cline{1-1} \cline{3-4}
+	4.2.x &  & 17 & 11.7\%\\ \cline{1-1} \cline{3-4}
+	4.3 &  & 18 & 3.4\%\\ \hline
+	4.4 & KitKat & 19 & 35.5\%\\ \hline
+	5.0 & Lollipop & 21 & 17.0\%\\ \cline{1-1} \cline{3-4}
+	5.1 &  & 22 & 17.1\%\\ \hline
+	6.0 & Marshmallow & 23 & 1.2\%\\ \hline
+\end{longtable}
+
 \section{Literaturverweis}
 
 Weil für die alte\index{alte} und die neue Rechtschreibung verschiedene Trennregeln\index{Trennregeln} gelten, sind Deutsch mit alter Rechtschreibung und Deutsch mit neuer Rechtschreibung zwei verschiedene Sprachen (\cite{Knappen2009}, S. 192).
