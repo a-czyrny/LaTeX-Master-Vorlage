@@ -31,8 +31,9 @@ Die Vorlage wurde erfolgreich unter der [TEX Live](http://tug.org/texlive/) Umge
 
 **Optionale Software:**
 
-* git (zum Clonen und Contributen)
-* perl (für ```Latexmk```)
+* ```git``` (zum Clonen und Contributen)
+* ```perl``` (für ```latexmk```)
+* ```latexmk``` (über MikTex)
 
 ### Linux (getestet mit Debian Jessie)
 **Benötigte Software:**
@@ -51,22 +52,32 @@ Die Vorlage wurde erfolgreich unter der [TEX Live](http://tug.org/texlive/) Umge
 
 **Optionale Software:**
 
-* git (zum Clonen und Contributen)
-* perl (für ```Latexmk```)
+* ```git``` (zum Clonen und Contributen)
+* ```perl``` (für ```latexmk```)
+* ```latexmk``` (über MikTex)
 
 ## Runterladen der LaTeX Dateien
 Die Vorlage kann entweder mit ```git clone https://github.com/a-czyrny/LaTeX-Master-Vorlage.git``` (siehe optionale Software) oder mit über die GitHub Seite als *.zip Datei runtergeladen werden.
 
 
 ## Bearbeiten und Compilieren der LaTeX Dateien
-Unter **Windows** kann TexStudio genutzt werden, die Vorlage den eigenen Bedürfnissen anzupassen und zu compilieren.
-Um die Vorlage mit TexStudio zu bearbeiten, muss die main.tex mit TexStudio geöffnet werden.
-Mit ```F5``` wird dann das PDF erstellt.
+###Windows
+Unter **Windows** ist [TexStudio](http://www.texstudio.org/) als Editor empfohlen.
 
-**Achtung**
+Wenn die Standardeinstellungen von TexStudio genutzt werden, müssen noch zwei manuelle Schritte durchgeführt werden:
+1. Die Referenzen für das Glossar und das Abkürzungsverzeichnis müssen erstellt werden. In der Kommandozeile in dem Ordner der Vorlage:
 
-Um Referenzen korrekt aufzulösen, muss das Dokument mehrfach compiliert werden. Zweimal hintereinander ```F5``` löst dieses Problem.
+    makeindex -s main.ist -t main.alg -o main.acr main.acn
+    makeindex -s main.ist -t main.glg -o main.gls main.glo 
 
+2. Das LaTeX Dokument muss zwei mal compiliert werden (```F5```) damit alle Referenzen aufgelöst werden.
+
+**Alternative** 
+
+Wenn ```latexmk``` installiert wurde (siehe optionale Software) kann im TexStudio unter "Optionen / TexStudio konfigurieren / Erzeugen" auch ```latexmk```als Standardkompiler angegeben werden.
+```latexmk```funktioniert dann auch von der Kommandozeile aus
+ 
+### Linux
 Unter **Linux** kann die Vorlage mit dem Texteditor der Wahl editiert werden. Zum compilieren kann ```lualatex``` genutzt werden:
 
     lualatex -synctex=1 -interaction=nonstopmode main
@@ -76,6 +87,10 @@ Unter **Linux** kann die Vorlage mit dem Texteditor der Wahl editiert werden. Zu
     makeindex -s main.ist -t main.glg -o main.gls main.glo
     lualatex -synctex=1 -interaction=nonstopmode main
     lualatex -synctex=1 -interaction=nonstopmode main
+    
+**Alternative**
+Wenn ```latexmk``` installiert wurde (siehe optionale Software) kann in dem Verzeichnis auch ```latexmk```angegeben werden. Dies führt die oben genannten Schritte aus.
+    
 
 # Contributing 
 Die Funktionskommentare innerhalb der *.tex Dateien sind größtenteils auf Deutsch. 
