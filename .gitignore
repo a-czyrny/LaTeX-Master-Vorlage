@@ -24,3 +24,8 @@
 *.xml
 *.lol
 *.gz(busy)
+
+# makeindex style file created by the glossaries package
+*.ist
+# indexstyle includes the Header of the site
+!indexstyle.ist
