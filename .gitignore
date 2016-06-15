@@ -29,3 +29,7 @@
 *.ist
 # indexstyle includes the Header of the site
 !indexstyle.ist
+
+# latexmk files
+*.fls
+*.fdb_latexmk
