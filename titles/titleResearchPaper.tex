@@ -26,7 +26,10 @@
 					Betreuer: &\@firstExaminer\\
 					\\
 					Eingereicht von: &\@author\\
+					\ifx\@matrikelnr\empty
+					\else
 					Matrikelnummer: & \@matrikelnr\\
+					\fi
 					Datum der Abgabe: & \@submitDate
 				\end{tabular}
 			\end{flushleft}
