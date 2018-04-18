@@ -19,14 +19,17 @@
 			\vskip 0.5cm
 			{\large an der}
 			\vskip 0.5cm
-			{\large Hochschule für Technik und Wirtschaft Berlin\\ Fachbereich Wirtschaftswissenschaften II\\ Studiengang Angewandte Informatik}
+			{\large Hochschule für Technik und Wirtschaft Berlin\\ Fachbereich 4 - Informatik, Kommunikation und Wirtschaft\\ Studiengang Angewandte Informatik}
 			\vfill
 			\begin{flushleft}
 				\begin{tabular}[t]{rl}
 					Betreuer: &\@firstExaminer\\
 					\\
 					Eingereicht von: &\@author\\
+					\ifx\@matrikelnr\empty
+					\else
 					Matrikelnummer: & \@matrikelnr\\
+					\fi
 					Datum der Abgabe: & \@submitDate
 				\end{tabular}
 			\end{flushleft}
