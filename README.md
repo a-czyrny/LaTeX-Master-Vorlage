@@ -61,7 +61,7 @@ Die Vorlage kann entweder mit ```git clone https://github.com/a-czyrny/LaTeX-Mas
 
 
 ## Bearbeiten und Compilieren der LaTeX Dateien
-###Windows
+### Windows
 Unter **Windows** ist [TexStudio](http://www.texstudio.org/) als Editor empfohlen.
 
 Wenn die Standardeinstellungen von TexStudio genutzt werden, müssen noch zwei manuelle Schritte durchgeführt werden:
