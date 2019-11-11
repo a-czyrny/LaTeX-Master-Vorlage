@@ -1,0 +1,37 @@
+\makeatletter
+
+\newcommand*{\firstExaminer}[1]{\gdef\@firstExaminer{#1}}
+\newcommand*{\subTitle}[1]{\gdef\@subTitle{#1}}
+\newcommand*{\researchPart}[1]{\gdef\@researchPart{#1}}
+\newcommand*{\matrikelnr}[1]{\gdef\@matrikelnr{#1}}
+\newcommand*{\submitDate}[1]{\gdef\@submitDate{#1}}
+
+
+\renewcommand*{\maketitle}{
+	\begin{titlepage}
+		\newgeometry{left=2.5cm,right=2.5cm,top=9.0cm,bottom=2.5cm}
+		\begin{center}
+			\vfill
+			{\Large \@title\par}
+			{\normalsize \@subTitle\par}
+			\vskip 0.5cm
+			{\large \bfseries Forschungsprojekt Teil \@researchPart\par}
+			\vskip 0.5cm
+			{\large an der}
+			\vskip 0.5cm
+			{\large Hochschule für Technik und Wirtschaft Berlin\\ Fachbereich Wirtschaftswissenschaften II\\ Studiengang Angewandte Informatik}
+			\vfill
+			\begin{flushleft}
+				\begin{tabular}[t]{rl}
+					Betreuer: &\@firstExaminer\\
+					\\
+					Eingereicht von: &\@author\\
+					Matrikelnummer: & \@matrikelnr\\
+					Datum der Abgabe: & \@submitDate
+				\end{tabular}
+			\end{flushleft}
+		\end{center}
+		\restoregeometry
+	\end{titlepage}
+}
+\makeatother

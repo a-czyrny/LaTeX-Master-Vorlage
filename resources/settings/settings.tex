@@ -1,12 +1,9 @@
 %Dokumentenklasse "scrbook" - Erweitert um den Verweis auf die Verzeichnisse und Texteigenschaften
 \documentclass[chapterprefix=true, 12pt, a4paper, oneside, parskip=half, listof=totoc, bibliography=totoc, numbers=noendperiod]{scrbook}
 
-% Ränder (Standard bottom ca. 52mm anbzüglich von ca. 4mm für die nach oben rechts gewanderte Seitenzahl)
-%Anpassung der Seitenränder
-\usepackage[bottom=48mm,left=25mm,right=25mm]{geometry}
 
-% Ränder bei Bedarf zeigen
-%\usepackage{showframe}
+%Anpassung der Seitenränder (Standard bottom ca. 52mm anbzüglich von ca. 4mm für die nach oben rechts gewanderte Seitenzahl)
+\usepackage[bottom=48mm,left=25mm,right=25mm]{geometry}
 
 %Tweaks für scrbook
 \usepackage{scrhack}
@@ -26,21 +23,13 @@
 %Zitate besser formatieren und darstellen
 \usepackage{epigraph}
 
-%Glossar, Stichworverzeichnis
-\usepackage[toc, acronym]{glossaries} % Akronyme werden als eigene Liste aufgeführt
+%Glossar, Stichworverzeichnis (Akronyme werden als eigene Liste aufgeführt)
+\usepackage[toc, acronym]{glossaries} 
 
 %Anpassung von Kopf- und Fußzeile
 %beinflusst die erste Seite des Kapitels
 \usepackage[automark,headsepline]{scrlayer-scrpage}
-\automark{chapter}
-\ihead{\leftmark}
-\chead{}
-\ohead{\thepage}
-\ifoot*{}
-\cfoot[\thepage]{}
-\cfoot*{}
-\ofoot*{}
-\pagestyle{scrheadings}
+\input{resources/styles/header_footer}
 
 %Auskommentieren für die Verkleinerung des vertikalen Abstandes eines neuen Kapitels
 %\renewcommand*{\chapterheadstartvskip}{\vspace*{.25\baselineskip}}
@@ -62,16 +51,13 @@
 %Einfachere Zitate
 \usepackage{epigraph}
 
-%Verwendung von Akronymen
-\usepackage[printonlyused]{acronym}
-
 %Unterstützung der H positionierung (keine automatische Verschiebung eingefügter Elemente)
 \usepackage{float} 
 
 %Erlaubt Umbrüche innerhalb von Tabellen
 \usepackage{tabularx}
 
-%Erlaubt Seitenumbrüche mit Tabellen
+%Erlaubt Seitenumbrüche innerhalb von Tabellen
 \usepackage{longtable}
 
 %Erlaubt die Darstellung von Sourcecode mit Highlighting
@@ -96,54 +82,3 @@
 \usepackage{csquotes} %wird von biber benötigt
 \usepackage[style=alphabetic, backend=biber, bibencoding=ascii]{biblatex}
 \addbibresource{references/references.bib}
-
-%-------------------------------Zusätzliche Anpassungen und Modifikationen--------------------------------------------%
-
-%Anpassung der Überschriften
-\addtokomafont{disposition}{\rmfamily}
-
-%Zusätzliche Farben
-\definecolor{darkgreen}{RGB}{0,100,0}
-
-%Umbenennungen
-\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
-
-%Pluszeichen in der Referenc beim zitieren ausblenden
-\renewcommand*{\labelalphaothers}{}
-
-%Anpassugen zur Quelltextdarstellung, kann bei Bedarf überschrieben werden (z.B. wenn unterschiedliche Sprachen zum Einsatz kommen)
-\renewcommand{\lstlistingname}{Codeauszug}
-\lstset{
-	language=Java,
-	numbers=left,
-	columns=fullflexible,
-	aboveskip=5pt,
-	belowskip=10pt,
-	basicstyle=\small\ttfamily,
-	backgroundcolor=\color{black!5},
-	commentstyle=\color{darkgreen},
-	keywordstyle=\color{blue},
-	stringstyle=\color{gray},
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	xleftmargin=16pt,
-	xrightmargin=0pt,
-	framesep=5pt,
-	framerule=3pt,
-	frame=leftline,
-	rulecolor=\color{green},
-	tabsize=2,
-	breaklines=true,
-	breakatwhitespace=true,
-	prebreak={\mbox{$\hookleftarrow$}}
-}
-
-%Anpassungen für das Abkürzungsverzeichnis
-\newglossarystyle{dottedlocations}{%
-	\glossarystyle{list}%
-	\renewcommand*{\glossaryentryfield}[5]{%
-		\item[\glsentryitem{##1}\glstarget{##1}{##2}] \emph{##3}%
-		\unskip\leaders\hbox to 2.9mm{\hss.}\hfill##5}%
-	\renewcommand*{\glsgroupskip}{}%
-}

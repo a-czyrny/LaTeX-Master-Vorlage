@@ -1,11 +1,10 @@
 \makeatletter
 
+\newcommand*{\gradeType}[1]{\gdef\@gradeType{#1}}
 \newcommand*{\firstExaminer}[1]{\gdef\@firstExaminer{#1}}
-\newcommand*{\subTitle}[1]{\gdef\@subTitle{#1}}
-\newcommand*{\researchPart}[1]{\gdef\@researchPart{#1}}
+\newcommand*{\secondExaminer}[1]{\gdef\@secondExaminer{#1}}
 \newcommand*{\matrikelnr}[1]{\gdef\@matrikelnr{#1}}
 \newcommand*{\submitDate}[1]{\gdef\@submitDate{#1}}
-
 
 \renewcommand*{\maketitle}{
 	\begin{titlepage}
@@ -13,23 +12,22 @@
 		\begin{center}
 			\vfill
 			{\Large \@title\par}
-			{\normalsize \@subTitle\par}
 			\vskip 0.5cm
-			{\large \bfseries Forschungsprojekt Teil \@researchPart\par}
+			{\large \bfseries Abschlussarbeit\par}
+			\vskip 0.5cm
+			{\large zur Erlangung des akademischen Grades\\ \bfseries \@gradeType}
 			\vskip 0.5cm
 			{\large an der}
 			\vskip 0.5cm
-			{\large Hochschule für Technik und Wirtschaft Berlin\\ Fachbereich 4 - Informatik, Kommunikation und Wirtschaft\\ Studiengang Angewandte Informatik}
+			{\large Hochschule für Technik und Wirtschaft Berlin\\ Fachbereich Wirtschaftswissenschaften II\\ Studiengang Angewandte Informatik}
 			\vfill
 			\begin{flushleft}
 				\begin{tabular}[t]{rl}
-					Betreuer: &\@firstExaminer\\
+					1. Prüfer: &\@firstExaminer\\
+					2. Prüfer: & \@secondExaminer\\
 					\\
 					Eingereicht von: &\@author\\
-					\ifx\@matrikelnr\empty
-					\else
 					Matrikelnummer: & \@matrikelnr\\
-					\fi
 					Datum der Abgabe: & \@submitDate
 				\end{tabular}
 			\end{flushleft}

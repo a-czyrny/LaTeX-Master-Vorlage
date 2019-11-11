@@ -1,39 +1,41 @@
-\include{settings}
+%Dokumenteinstellungen und Anpassungen
+\input{resources/settings/settings}
+\input{resources/styles/adjustments}
 
-%%Titles - Uncomment one section of titles
+%Titelformen - gewünschtes Layout einkommentieren
 
-%%Used for titleGraduation
-\include{titles/titleGraduation}
-\logoPathL{} %just leave empty to hide logo
-\logoWidthL{0.5}
-\logoPathR{resources/HTW_Berlin_Logo_pos_GRAU_RGB.jpg} %just leave empty to hide logo
-\logoWidthR{1}
+%%Graduation
+\include{titles/graduation}
 \gradeType{Master of Science (M.Sc.)}
 \secondExaminer{Max Mustermann}
 
-%%Used for titleResearchPaper
-%\include{titles/titleResearchPaper}
+%Research paper
+%\include{titles/research_papger}
 %\subTitle{Ein optionaler Untertitel der Arbeit}
 %\researchPart{A}
 
-%%Used by all titles
+%Angaben zur Arbeit und dem Author (von beiden Layouts genutzt)
 \title{Dies ist der Titel der Abschlussarbeit der sich auch über mehrere Zeilen erstrecken kann}
 \author{Max Mustermann}
-\matrikelnr{s0000000} % just leave empty to hide number
-\submitDate{05.10.2015}
+\matrikelnr{s0000000}
+\submitDate{25.04.2017}
 \firstExaminer{Max Mustermann}
-%%End Titles
 
-\makeindex[title=Stichwortverzeichnis, options=-s indexstyle.ist, intoc]
-\indexsetup{level=\chapter*,toclevel=chapter}
-
+%Verzeichnisse generieren
 \makeglossaries
-\loadglsentries{glossary_and_acronyms.tex}
+\loadglsentries{references/glossary_acronyms.tex}
 \setacronymstyle{long-short}
 
+\makeindex[columns=2, title=Stichwortverzeichnis, options= -s resources/styles/indexstyle.ist, intoc]
+\indexsetup{level=\chapter*,toclevel=chapter}
+
+%Start des Inhalts
 \begin{document}
 
-\pagenumbering{alph} %fix for same identifier warning, character is not show in title
+%Notwendiger Workaround
+\pagenumbering{alph}
+
+%Deckblatt erzeugen
 \maketitle
 
 \pagenumbering{Roman}
@@ -41,22 +43,31 @@
 \include{chapter/Vorwort} \clearpage
 \include{chapter/Abstract} \clearpage
 
+%Inhaltsverzeichnis
 \tableofcontents \newpage
 
+%Hauptteil
 \pagenumbering{arabic}
 \input{chapter/Einleitung} \clearpage
 \input{chapter/Beispiele} \clearpage
 
+%Anhang
 \pagenumbering{Alph}
+
+%Abbildungsverzeichnis
 \listoffigures \clearpage
+%Tabellenverzeichnis
 \listoftables \clearpage
+%Quelltextverzeichnis
 \lstlistoflistings \clearpage
-
+%Stichwortverzeichnis
 \printindex \clearpage
-
+%Glossar
 \printglossary[title={Glossar}] \clearpage
+%Abkürzungsverzeichnis
 \printglossary[style=dottedlocations,type=\acronymtype,title={Abkürzungsverzeichnis}] \clearpage
 
+%Literaturverzeichnisse (getrennt nach Stichwort)
 \printbibliography[heading=bibintoc, keyword={book}, title={Literaturverzeichnis}]\clearpage
 \printbibliography[heading=bibintoc, keyword={online}, title={Onlinequellen}]\clearpage
 \printbibliography[heading=bibintoc, keyword={image}, title={Bildquellen}]\clearpage
