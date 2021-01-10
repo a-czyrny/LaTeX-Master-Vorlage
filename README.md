@@ -110,3 +110,6 @@ siehe: preamble "\\\markboth{**STICHWORTVERZEICHNIS**}{}\n\n\\begin{theindex}\n"
 
 # Welcher Professororen/ Prüfer haben Arbeiten mit dieser Vorlage bereits zugestimmt?
 * Prof. Dr. Fortenbacher, Masterarbeit
+
+# Lizenz
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a rel="cc:attributionURL" property="dct:title" href="https://github.com/a-czyrny/LaTeX-Master-Vorlage">LaTeX Master Vorlage</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/a-czyrny">Alexander Czyrny</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International</a></p>
