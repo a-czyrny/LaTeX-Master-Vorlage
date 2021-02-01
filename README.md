@@ -1,6 +1,7 @@
 # LaTeX-Master-Vorlage
 
-Die Latex-Master-Vorlage kann für Forschungsprojekte, Bachelor- und Masterarbeiten optimal genutzt werden. Notwendigen Pakete sind bereits eingebunden und Einstellungen vorgenommen. 
+Die Latex-Master-Vorlage kann für Forschungsprojekte, Bachelor- und Masterarbeiten optimal genutzt werden. Notwendige
+Pakete sind bereits eingebunden und Einstellungen vorgenommen. 
 
 Diese LaTeX Vorlage wurde bereits für Masterarbeiten an der Hochschule für Technik und Wirtschaft Berlin (HTW Berlin), Fachbereich 4 genutzt.
 
