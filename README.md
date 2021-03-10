@@ -68,8 +68,10 @@ Unter **Windows** ist [TexStudio](http://www.texstudio.org/) als Editor empfohle
 Wenn die Standardeinstellungen von TexStudio genutzt werden, müssen noch zwei manuelle Schritte durchgeführt werden:
 1. Die Referenzen für das Glossar und das Abkürzungsverzeichnis müssen erstellt werden. In der Kommandozeile in dem Ordner der Vorlage:
 
-    makeindex -s main.ist -t main.alg -o main.acr main.acn
-    makeindex -s main.ist -t main.glg -o main.gls main.glo 
+```
+makeindex -s main.ist -t main.alg -o main.acr main.acn
+makeindex -s main.ist -t main.glg -o main.gls main.glo 
+```
 
 2. Das LaTeX Dokument muss zwei mal compiliert werden (```F5```) damit alle Referenzen aufgelöst werden.
 
